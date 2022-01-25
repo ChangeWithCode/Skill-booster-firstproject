@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <main class="page lanidng-page">
+            <section class="portfolio-block block-intro">
+                <div class="container">
+                    <div class="avatar">
+                    <img class="avatar" id="new-image" src="assets/img/avatars/avatar.jpg" alt=""></div>
+                    <div class="about-me">
+                        <p>Hello! I am <strong id="new-name">John</strong>. <p id="new-intro">I work as interface and front end developer. I have passion for pixel perfect, minimal and easy to use interfaces.</p></p><a class="btn btn-outline-primary" role="button" href="#">Hire me</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+      </div>
+      <div class="col-sm mt-md-3">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" class="form-control" id="name-update"  placeholder="Enter name" value="test">
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Intro</label>
+                <textarea class="form-control" id="intro" cols="30" rows="8"></textarea>
+              </div>
+            <br>
+            <div class="form-group">
+            <input type="file" class="form-control-file" id="image-update">
+            </div>
+            <br>  
+            <button type="submit" onclick="myFunction()" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    
+    function myFunction() {
+
+
+    new_name =document.getElementById("name-update").value;
+    new_intro =document.getElementById("intro").value;
+    new_image = document.getElementById('image-update').value;
+    document.getElementById("new-name").innerText = new_name;
+    document.getElementById("new-intro").innerText = new_intro;
+
+    var Element = document.getElementById("image-update");
+	var img = document.querySelector('img');
+    var url = URL.createObjectURL(Element.files[0]);
+    img.src = url;
+
+}
+
+
+
+  </script>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
